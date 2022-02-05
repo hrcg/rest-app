@@ -1,0 +1,49 @@
+<form [formGroup]="postForm">
+  <div class="input-container">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="title">Title</mat-label>
+      <input matInput id="title" type="text" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="body">Body</mat-label>
+      <input matInput id="body" type="text" formControlName="body" />
+    </mat-form-field>
+  </div>
+  <div class="button-container">
+    <button
+      class="actionButtons"
+      type="button"
+      mat-mini-fab
+      color="warn"
+      aria-label="close"
+      title="close"
+      (click)="closeDialog()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <button
+      class="actionButtons"
+      type="button"
+      mat-mini-fab
+      color="primary"
+      aria-label="add"
+      title="add"
+      *ngIf="!data.post"
+      (click)="createPost()"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+    <button
+      class="actionButtons"
+      type="button"
+      mat-mini-fab
+      color="primary"
+      aria-label="update"
+      title="update"
+      *ngIf="data.post"
+      (click)="updatePost()"
+    >
+      <mat-icon>update</mat-icon>
+    </button>
+  </div>
+</form>

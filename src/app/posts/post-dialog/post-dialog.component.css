@@ -1,0 +1,19 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.example-full-width {
+  width: 400px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButtons {
+  margin: 0.3rem 1rem 0.3rem 1rem;
+}
